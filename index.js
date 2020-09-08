@@ -28,8 +28,8 @@ var server = http.createServer(function(req, res){
   routePath(req, res)
 })
 
-server.listen(8090)
-console.log('visit http://localhost:8090' )
+server.listen(8010)
+console.log('visit http://localhost:8010' )
 
 
 function routePath(req, res){
