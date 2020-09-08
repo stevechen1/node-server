@@ -38,9 +38,6 @@ function routePath(req, res){
   var handleFn = routes[pathObj.pathname]
   if(handleFn){
     req.query = pathObj.query
-
-    //参考 https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
-    // post json 解析
     var body = ''
     req.on('data', function(chunk){
       body += chunk
