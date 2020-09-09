@@ -47,7 +47,7 @@ function routePath(req, res){
     })
     
   }else {
-    staticRoot(path.resolve(__dirname, 'static'), req, res)
+    staticRoot(path.resolve(__dirname), req, res)
   }
 }
 
@@ -56,7 +56,7 @@ function staticRoot(staticPath, req, res){
   var filePath = path.join(staticPath, pathObj.pathname)
   fs.readFile(filePath,'binary', function(err, content){
     if(err){
-      res.writeHead('404', 'haha Not Found')
+      res.writeHead('404', 'Not Found')
       return res.end()
     }
 
